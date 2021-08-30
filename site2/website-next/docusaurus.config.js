@@ -8,8 +8,8 @@ module.exports = {
     "Apache Pulsar is a cloud-native, distributed messaging and streaming platform originally created at Yahoo! and now a top-level Apache Software Foundation project",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
-  onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "ignore",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
@@ -23,7 +23,7 @@ module.exports = {
       items: [
         {
           type: "doc",
-          docId: "standalone",
+          docId: "intro",
           position: "left",
           label: "Docs",
         },
@@ -32,21 +32,6 @@ module.exports = {
           href: "https://github.com/apache/pulsar",
           label: "GitHub",
           position: "right",
-        },
-        {
-          label: "Version",
-          to: "docs",
-          position: "right",
-          items: [
-            {
-              label: "2.8.0",
-              to: "docs/",
-            },
-            {
-              label: "2.7.3",
-              to: "docs/2.7.3/",
-            },
-          ],
         },
       ],
     },
@@ -58,7 +43,7 @@ module.exports = {
           items: [
             {
               label: "Docs",
-              to: "/docs",
+              to: "/docs/intro",
             },
             {
               label: "Blog",
