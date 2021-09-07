@@ -479,4 +479,10 @@ public class ConsumerBuilderImpl<T> implements ConsumerBuilder<T> {
         conf.setPoolMessages(poolMessages);
         return this;
     }
+
+    @Override
+    public ConsumerBuilder<T> paused(boolean paused) {
+        conf.setStartPaused(paused);
+        return this;
+    }
 }
